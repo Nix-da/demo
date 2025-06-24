@@ -33,9 +33,3 @@ class Cookies(BaseModel):
     selected_id: Union[int, None] = None
 
 
-@router.get("/cookies")
-# not possible to test in /docs
-async def read_cookie(cookies: Annotated[Cookies, Cookie()]):
-    cookies.selected_id = 1
-    cookies.session_id = "session-id-12345"
-    return cookies
