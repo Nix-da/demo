@@ -8,12 +8,13 @@
    - `conda env create -f environment.yml`
 5. When using PyCharm, set the interpreter to the virtual environment:
    - Go to `File` > `Settings` > `Project: demo_project` > `Python Interpreter` > `Add Interpreter`.
-   - Choose `Existing environment`, select `Conda Environment` and point to the Python executable in your virtual environment (`C:/user/miniconda/envs/demo_project/python.exe` or `C:/user/anaconda/envs/demo_project/python.exe`).
+   - Choose `Existing environment`, select `Conda Environment` and use the newly created env. Or manually point to the Python executable in your virtual environment (`C:/user/miniconda/envs/demo/python.exe` or `C:/user/anaconda/envs/demo/python.exe`).
+     (If there is the "No conda environment selected" error, remove and manually add the .bat to the conda path. It is a strange bug)
 
    When using VSCode or the console, activate the environment with
-`conda activate demo_project`. This has to be done everytime when starting the project.
+`conda activate demo`. This has to be done everytime when starting the project.
 6. Run the project:
-   - In PyCharm: `Run` > `Edit and add new configuration` > `main.py`.
+   - In PyCharm: `Run` > `Edit and add new configuration` > select `python` > select `main.py` file as `script` (also double check that the env is selected as interpreter).
    - Or manually in the console: 
      `python main.py`
 
